@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co.com/fYSZ5FNh/image.png",
+    "name": "Virat Kohli",
+    "country": "India",
+    "role": "Batsman",
+    "rating": 95,
+    "batting": "Right-Hand-Bat",
+    "price": 15000000
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co.com/fcbDCXY/image.png",
+    "name": "Rohit Sharma",
+    "country": "India",
+    "role": "Batsman",
+    "rating": 94,
+    "batting": "Right-Hand-Bat",
+    "price": 14500000
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co.com/DHFqBkXQ/image.png",
+    "name": "Jasprit Bumrah",
+    "country": "India",
+    "role": "Bowler",
+    "rating": 96,
+    "batting": "Right-Hand-Bat",
+    "price": 14000000
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co.com/BKGJTxzX/image.png",
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "role": "Batsman",
+    "rating": 93,
+    "batting": "Right-Hand-Bat",
+    "price": 13500000
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co.com/5XB1Fy7S/image.png",
+    "name": "Mohammad Rizwan",
+    "country": "Pakistan",
+    "role": "Wicket-Keeper",
+    "rating": 90,
+    "batting": "Right-Hand-Bat",
+    "price": 11500000
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co.com/60XrWXJB/image.png",
+    "name": "Shaheen Afridi",
+    "country": "Pakistan",
+    "role": "Bowler",
+    "rating": 92,
+    "batting": "Left-Hand-Bat",
+    "price": 12500000
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co.com/5X0FpYq5/image.png",
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "role": "All-Rounder",
+    "rating": 91,
+    "batting": "Left-Hand-Bat",
+    "price": 12000000
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co.com/pr4P0Ny1/image.png",
+    "name": "Litton Das",
+    "country": "Bangladesh",
+    "role": "Wicket-Keeper",
+    "rating": 85,
+    "batting": "Right-Hand-Bat",
+    "price": 8500000
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co.com/Rkkv4qXQ/image.png",
+    "name": "Mustafizur Rahman",
+    "country": "Bangladesh",
+    "role": "Bowler",
+    "rating": 87,
+    "batting": "Left-Hand-Bat",
+    "price": 9000000
+  },
+  {
+    "id": 10,
+    "image": "https://i.ibb.co.com/WNcY2k8G/image.png",
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "role": "Batsman",
+    "rating": 92,
+    "batting": "Right-Hand-Bat",
+    "price": 13000000
+  },
+  {
+    "id": 11,
+    "image": "https://i.ibb.co.com/0jpsNc1h/image.png",
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "role": "Bowler",
+    "rating": 91,
+    "batting": "Left-Hand-Bat",
+    "price": 11500000
+  },
+  {
+    "id": 12,
+    "image": "https://i.ibb.co.com/TDRMLxtm/image.png",
+    "name": "Steve Smith",
+    "country": "Australia",
+    "role": "Batsman",
+    "rating": 93,
+    "batting": "Right-Hand-Bat",
+    "price": 13500000
+  }
+]
