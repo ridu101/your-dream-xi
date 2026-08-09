@@ -6,6 +6,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import AvailablePlayers from "./Components/AvailablePlayers/AvailablePlayers";
 import SelectedPlayers from "./Components/SelectedPlayers/SelectedPlayers";
+import NewsLatter from "./Components/NewsLatter";
 
 
 const fetchPlayers= async ()  =>{
@@ -34,8 +35,13 @@ function App() {
       </AvailablePlayers>
     </Suspense>
     {/* Selected Players */}
-    <Suspense>
+    {/* <Suspense>
       <SelectedPlayers></SelectedPlayers>
+    </Suspense> */}
+
+    {/* news latter */}
+    <Suspense>
+      <NewsLatter></NewsLatter>
     </Suspense>
   
   

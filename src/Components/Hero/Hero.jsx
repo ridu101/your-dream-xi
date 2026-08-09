@@ -4,11 +4,11 @@ import cricLogo from "../../assets/banner-main.png";
 
 const Hero = () => {
     return (
-        <div>
+        <div className="max-w-350  mx-auto">
                 {/* Hero Section */}
       <section className="px-4 md:px-8 lg:px-16 mt-4">
         <div
-          className="relative min-h-105 md:min-h-125 rounded-2xl overflow-hidden bg-cover bg-center"
+          className="relative min-h-105 md:min-h-125 rounded-2xl overflow-hidden  "
           style={{
             backgroundImage: `url(${heroBg})`,
           }}
