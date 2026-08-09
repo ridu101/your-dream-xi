@@ -1,8 +1,13 @@
 
 import dltLogo from "../../assets/Frame.png";
 
-const SelectedCard = ({ player }) => {
-  console.log(player);
+const SelectedCard = ({ player ,removePlayer}) => {
+  const handleRemove = () =>{
+    removePlayer(
+        player
+    )
+  }
+
 
   return (
     <div className="flex items-center justify-between border-2 border-gray-300 p-2 rounded-2xl mt-2">
@@ -20,7 +25,7 @@ const SelectedCard = ({ player }) => {
       </div>
 
       <div>
-        <button className="btn border-0">
+        <button onClick={handleRemove} className="btn border-0">
           <img src={dltLogo} alt="Delete" />
         </button>
       </div>

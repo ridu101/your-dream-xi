@@ -15,11 +15,17 @@ const fetchPlayers = async () => {
 };
 
 function App() {
-  const [toggle, setToggle] = useState();
+  const [toggle, setToggle] = useState(true);
   const [availableBalance, setAvailableBalance] = useState(60000000);
   const playerPromise = useMemo(() => fetchPlayers(), []);
-  const [purchasedPlayers, setPurchasePlayers]= useState([])
-  
+  const [purchasedPlayers, setPurchasePlayers] = useState([]);
+
+  const removePlayer = (p) => {
+    const filterPlayers = purchasedPlayers.filter((ply) => ply.id !== p.id);
+    setPurchasePlayers(filterPlayers);
+    setAvailableBalance(availableBalance+p.price)
+  };
+
   return (
     <>
       {/* Navbar */}
@@ -33,7 +39,11 @@ function App() {
       </Suspense>
       {/* Toggling section */}
       <div className=" max-w-300  mx-auto flex items-center justify-between mt-10">
-        <h1 className="text-xl font-bold">Available Players</h1>
+        <h1 className="text-xl font-bold">
+          {toggle === true
+            ? "Available Players"
+            : `Selected Players (${purchasedPlayers.length}/6)`}
+        </h1>
         <div>
           <button
             onClick={() => setToggle(true)}
@@ -45,7 +55,7 @@ function App() {
             onClick={() => setToggle(false)}
             className={`py-3 px-4 border border-gray-400 rounded-r-2xl border-l-0  font-medium ${toggle === false ? "bg-[#E7FE29]" : ""}`}
           >
-            Selected <span>(0)</span>
+            Selected <span>({purchasedPlayers.length})</span>
           </button>
         </div>
       </div>
@@ -62,7 +72,8 @@ function App() {
       ) : (
         <Suspense>
           <SelectedPlayers
-          purchasedPlayers={purchasedPlayers}
+            purchasedPlayers={purchasedPlayers}
+            removePlayer={removePlayer}
           ></SelectedPlayers>
         </Suspense>
       )}
