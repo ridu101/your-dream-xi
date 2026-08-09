@@ -1,7 +1,7 @@
 import "./App.css";
 
-
-import { Suspense, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
+// import { Suspense, useState } from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import AvailablePlayers from "./Components/AvailablePlayers/AvailablePlayers";
@@ -18,12 +18,13 @@ return res.json()
 
 function App() {
  const [toggle, setToggle] = useState()
-  const playerPromise= fetchPlayers();
+ const [availableBalance, setAvailableBalance]= useState(600000000)
+  const playerPromise = useMemo(() => fetchPlayers(), []);
   return (
     <>
     {/* Navbar */}
     <Suspense>
-      <Navbar></Navbar>
+      <Navbar availableBalance={availableBalance}></Navbar>
     </Suspense>
 
     {/* Hero */}
@@ -40,7 +41,12 @@ function App() {
     </div>
     {
       toggle === true ? <Suspense fallback={<h2>Loading Data..........</h2>}>
-      <AvailablePlayers playerPromise={playerPromise}>
+      <AvailablePlayers 
+      playerPromise={playerPromise}
+      setAvailableBalance={setAvailableBalance}
+      availableBalance={availableBalance}
+      >
+
        
       </AvailablePlayers>
     </Suspense> :  <Suspense>
