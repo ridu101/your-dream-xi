@@ -5,8 +5,10 @@ import { Suspense } from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import AvailablePlayers from "./Components/AvailablePlayers/AvailablePlayers";
-import SelectedPlayers from "./Components/SelectedPlayers/SelectedPlayers";
+// import SelectedPlayers from "./Components/SelectedPlayers/SelectedPlayers";
 import NewsLatter from "./Components/NewsLatter";
+import Footer from "./Components/Footer";
+
 
 
 const fetchPlayers= async ()  =>{
@@ -42,6 +44,10 @@ function App() {
     {/* news latter */}
     <Suspense>
       <NewsLatter></NewsLatter>
+    </Suspense>
+    {/* footer */}
+    <Suspense>
+      <Footer></Footer>
     </Suspense>
   
   

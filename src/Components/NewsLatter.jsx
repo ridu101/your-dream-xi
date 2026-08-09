@@ -4,7 +4,7 @@ import heroBg from "../assets/bg-shadow.png"
 const NewsLatter = () => {
   return (
     <div>
-      <div className=" p-10 text-center  my-1 mt-10" style={{
+      <div className=" p-30 text-center  my-1 mt-10 relative top-40 bg-white max-w-300 mx-auto rounded-4xl" style={{
                   backgroundImage: `url(${heroBg})`,
                 }}> 
        <div className="item-center text-center">
@@ -16,7 +16,7 @@ const NewsLatter = () => {
             <label className="input validator join-item">
               <svg
                 className="h-[1em] opacity-50"
-                xmlns="http://www.w3.org/2000/svg"
+                xmlns="http://www.w3.org/2000/svg"            
                 viewBox="0 0 24 24"
               >
                 <g
