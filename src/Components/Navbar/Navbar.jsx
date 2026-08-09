@@ -47,7 +47,7 @@ const Navbar = () => {
               {/* Coin Button */}
               <div className="flex items-center gap-2 border border-gray-200 rounded-xl px-4 py-2 bg-white">
                 <span className="text-sm font-semibold text-gray-900">
-                  0 Coin
+                  6000000000 Coin
                 </span>
 
                 <img

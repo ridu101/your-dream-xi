@@ -65,7 +65,7 @@ const Footer = () => {
                   Enter valid email address
                 </div>
               </div>
-              <button className="btn btn-primary join-item">Subscribe</button>
+              <button className="btn btn-primary join-item bg-[#E7FE29] text-black border-none hover:bg-[#d4eb1f]">Subscribe</button>
             </div>
           </div>
         </div>

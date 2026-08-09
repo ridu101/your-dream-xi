@@ -36,7 +36,7 @@ const NewsLatter = () => {
               Enter valid email address
             </div>
           </div>
-          <button className="btn btn-neutral join-item">Subscribe</button>
+          <button className="btn btn-neutral join-item bg-[#E7FE29] text-black border-none hover:bg-[#d4eb1f]">Subscribe</button>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@
 import { use } from "react";
 import userLogo from "../../assets/user 1.png";
 import flag from "../../assets/report 1.png";
-import "./AvilablePlayer.css"
+
 
 
 const AvailablePlayers = ({ playerPromise }) => {
@@ -11,11 +11,11 @@ const AvailablePlayers = ({ playerPromise }) => {
   console.log(playerData);
 
   return (
-    <div className=" max-w-300  mx-auto cardPlayer">
+    <div className=" max-w-300  mx-auto cardPlayer grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  gap-5 mt-10">
       {playerData.map((player) => (
-        <div className="card bg-base-100 w-96 shadow-sm p-5">
+        <div className="card shadow-sm p-6 bg-gray-200 rounded-xl">
           <figure>
-            <img className="w-94 h-94 rounded-2xl"
+            <img className="w-94 h-94 rounded-2xl object-cover"
               src={player.image}
               alt="player-image"
             />
@@ -29,15 +29,15 @@ const AvailablePlayers = ({ playerPromise }) => {
               <div className="flex mt-3 gap-2">
                 <img src={flag} alt="" /> <p>{player.country}</p>
               </div>
-              <button class="btn">All Rounder</button>
+              <button class="btn">{player.role}</button>
             </div>
             <div className="flex mt-4 justify-between">
               <p className=" font-bold">Rating</p>
               <p>{player.rating}</p>
             </div>
             <div className="flex justify-between mt-4">
-              <p>Left-Handed-Bat</p>
-              <p className="text-gray-600">Left-Handed-Bowl</p>
+              <p>{player.batting}</p>
+              <p className="text-gray-600">{player.bowling}</p>
             </div>
             <div className="flex justify-between mt-4 items-center">
               <p>
