@@ -6,7 +6,7 @@ import PlayerCard from "../PlayerCard/PlayerCard";
 
 
 
-const AvailablePlayers = ({ playerPromise, setAvailableBalance,availableBalance }) => {
+const AvailablePlayers = ({ playerPromise, setAvailableBalance,availableBalance ,purchasedPlayers,setPurchasePlayers}) => {
   const playerData = use(playerPromise);
   console.log(playerData);
 
@@ -17,6 +17,8 @@ const AvailablePlayers = ({ playerPromise, setAvailableBalance,availableBalance 
         player={player} 
         setAvailableBalance={setAvailableBalance}
         availableBalance={availableBalance}
+        purchasedPlayers={purchasedPlayers}
+        setPurchasePlayers={setPurchasePlayers}
         ></PlayerCard>
       ))}
     </div>

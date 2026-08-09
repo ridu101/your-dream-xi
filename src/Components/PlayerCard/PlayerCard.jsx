@@ -3,11 +3,25 @@ import userLogo from "../../assets/user 1.png";
 import flag from "../../assets/report 1.png";
 import { useState } from "react";
 
-const PlayerCard = ({ player, setAvailableBalance, availableBalance }) => {
+const PlayerCard = ({
+  player,
+  setAvailableBalance,
+  availableBalance,
+  purchasedPlayers,
+  setPurchasePlayers,
+}) => {
   const [isSelected, setIsSelected] = useState(false);
   const handleSelected = (playerData) => {
+    const playerPrice = playerData.price;
+
+    if (playerPrice > availableBalance) {
+      alert("⚠️ Insufficient Balance!");
+      return;
+    }
+
     setIsSelected(true);
-    setAvailableBalance(availableBalance - playerData.price);
+    setAvailableBalance(availableBalance - playerPrice);
+    setPurchasePlayers([...purchasedPlayers, playerData]);
   };
   return (
     <div className="card shadow-sm p-6 bg-gray-200 rounded-xl">
@@ -43,7 +57,9 @@ const PlayerCard = ({ player, setAvailableBalance, availableBalance }) => {
           </p>
           <button
             disabled={isSelected}
-            onClick={() => {handleSelected(player)}}
+            onClick={() => {
+              handleSelected(player);
+            }}
             class="btn btn-outline btn-primary"
           >
             {isSelected ? "Selected" : "Choose a Player"}
