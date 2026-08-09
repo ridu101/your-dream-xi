@@ -1,5 +1,5 @@
 import "./App.css";
-
+import { ToastContainer } from 'react-toastify';
 import { Suspense, useMemo, useState } from "react";
 // import { Suspense, useState } from "react";
 import Navbar from "./Components/Navbar/Navbar";
@@ -16,7 +16,7 @@ const fetchPlayers = async () => {
 
 function App() {
   const [toggle, setToggle] = useState(true);
-  const [availableBalance, setAvailableBalance] = useState(60000000);
+  const [availableBalance, setAvailableBalance] = useState(600000000);
   const playerPromise = useMemo(() => fetchPlayers(), []);
   const [purchasedPlayers, setPurchasePlayers] = useState([]);
 
@@ -86,6 +86,8 @@ function App() {
       <Suspense>
         <Footer></Footer>
       </Suspense>
+
+      <ToastContainer></ToastContainer>
     </>
   );
 }
